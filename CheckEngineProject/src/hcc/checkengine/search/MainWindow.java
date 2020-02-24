@@ -9,7 +9,7 @@ public class MainWindow extends JFrame
 
 	public MainWindow()
 	{
-		super ("Main Window");
+		super ("Search Engine");
 		
 		setLayout(new BorderLayout());
 		
