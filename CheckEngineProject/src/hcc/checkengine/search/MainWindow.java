@@ -13,14 +13,17 @@ public class MainWindow extends JFrame
 			
 		JTextArea textArea = new JTextArea("Search Terms");
 		JButton abtBtn = new JButton("About");
+		JButton srchBtn = new JButton("Search");
 		JButton mtnBtn = new JButton("Maintenance");
 		JLabel lab1 = new JLabel("<html><font size=8><b>Search Engine</b></html>");
 		
 		
 		lab1.setBounds(180,-5,350,50); 
+
+		srchBtn.setBounds(410,50,80,30);
 		
 		// abtBtn holds information about the program
-		abtBtn.setBounds(484,0,100,30); //x axis, y axis, width, height
+		abtBtn.setBounds(474,0,100,30); //x axis, y axis, width, height
 		abtBtn.addActionListener(new ActionListener ()
 			{
 				public void actionPerformed(ActionEvent argO) 
@@ -42,7 +45,7 @@ public class MainWindow extends JFrame
 				}
 			});
 		
-		mtnBtn.setBounds(0,0,130,30); //x axis, y axis, width, height
+		mtnBtn.setBounds(10,0,130,30); //x axis, y axis, width, height
 		mtnBtn.addActionListener(new ActionListener ()
 			{
 				public void actionPerformed(ActionEvent argO) 
@@ -81,9 +84,9 @@ public class MainWindow extends JFrame
 				}
 			});
 		
-		textArea.setBounds(125,50,350,20);
+		textArea.setBounds(125,50,280,30);
 		
-		add(abtBtn); add(textArea); add(mtnBtn); add(lab1);
+		add(abtBtn); add(textArea); add(mtnBtn); add(lab1); add(srchBtn);
 		setLayout(null);
 		setSize(600, 500);
         setVisible(true);
