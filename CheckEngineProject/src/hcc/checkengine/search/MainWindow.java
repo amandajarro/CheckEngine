@@ -53,6 +53,7 @@ public class MainWindow extends JFrame
 					aboutWindow.setLayout(null);  
 					aboutWindow.setVisible(true);
 					aboutWindow.setResizable(false);
+					aboutWindow.setLocationRelativeTo(null);
 					aboutWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 					
 					abtLab.setBounds(0,0,400,300);
