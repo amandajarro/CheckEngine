@@ -2,7 +2,6 @@ package hcc.checkengine.search;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
 public class MainWindow extends JFrame 
@@ -28,8 +27,9 @@ public class MainWindow extends JFrame
 				{
 					
 					JFrame aboutWindow = new JFrame("About");
-					JLabel abtLab = new JLabel("<html><font size=4><p style=\"text-align:center\">Created for COP 2805C<br> </p></html>");
-					
+					//need to fix formatting
+					JLabel abtLab = new JLabel("<html><font size=4>Created for COP 2805C<br>by the Check Engine team.</html>");
+					abtLab.setHorizontalAlignment(JLabel.CENTER);
 					aboutWindow.setSize(400,300);  
 					aboutWindow.setLayout(null);  
 					aboutWindow.setVisible(true);
@@ -47,15 +47,37 @@ public class MainWindow extends JFrame
 			{
 				public void actionPerformed(ActionEvent argO) 
 				{
-					
-					JFrame addWindow = new JFrame("Maintenance View");    
+					JFrame addWindow = new JFrame("Maintenance View"); 
+
+					JLabel indxLab = new JLabel("<html><font size=6>Index Maintenence</html>");
+
+					JButton addBtn = new JButton("Add File");
+					JButton rbldBtn = new JButton("Rebuild Out-of-date");
+					JButton rstBtn = new JButton("Reset Windows");
+					JButton rmvBtn = new JButton("Remove Selected Files");
+
 					addWindow.setSize(600,400);  
 					addWindow.setLayout(null);  
 					addWindow.setVisible(true);
 					addWindow.setResizable(false);
 					addWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 					
-					
+					indxLab.setBounds(0,0,600,50);
+					indxLab.setHorizontalAlignment(JLabel.CENTER);
+
+					//add file button
+					addBtn.setBounds(10,320,130,30);
+
+					//rebuild index button 
+					rbldBtn.setBounds(10,280,180,30);
+
+					//reset windows button
+					rstBtn.setBounds(450,320,130,30);
+
+					//remove file button
+					rmvBtn.setBounds(400,280,180,30);
+
+					addWindow.add(indxLab); addWindow.add(addBtn); addWindow.add(rbldBtn); addWindow.add(rstBtn); addWindow.add(rmvBtn);
 				}
 			});
 		
@@ -66,7 +88,7 @@ public class MainWindow extends JFrame
 		setSize(600, 500);
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setResizable(false);
+		setResizable(false);
 	}
 	
 }
