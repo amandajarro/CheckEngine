@@ -20,8 +20,16 @@ public class MainWindow extends JFrame
 		
 		lab1.setBounds(180,-5,350,50); 
 
+		//search button
 		srchBtn.setBounds(410,50,80,30);
-		
+		srchBtn.addActionListener(new ActionListener ()
+			{
+				public void actionPerformed(ActionEvent argO) 
+					{
+						notImplemented();
+					}
+			});
+
 		// abtBtn holds information about the program
 		abtBtn.setBounds(474,0,100,30); //x axis, y axis, width, height
 		abtBtn.addActionListener(new ActionListener ()
@@ -70,15 +78,43 @@ public class MainWindow extends JFrame
 
 					//add file button
 					addBtn.setBounds(10,320,130,30);
+					addBtn.addActionListener(new ActionListener ()
+						{
+							public void actionPerformed(ActionEvent argO) 
+								{
+									notImplemented();
+								}
+						});
 
 					//rebuild index button 
 					rbldBtn.setBounds(10,280,180,30);
+					rbldBtn.addActionListener(new ActionListener ()
+					{
+						public void actionPerformed(ActionEvent argO) 
+							{
+								notImplemented();
+							}
+					});
 
 					//reset windows button
 					rstBtn.setBounds(450,320,130,30);
-
+					rstBtn.addActionListener(new ActionListener ()
+						{
+							public void actionPerformed(ActionEvent argO) 
+								{
+									notImplemented();
+								}
+						});
+						
 					//remove file button
 					rmvBtn.setBounds(400,280,180,30);
+					rmvBtn.addActionListener(new ActionListener ()
+					{
+						public void actionPerformed(ActionEvent argO) 
+							{
+								notImplemented();
+							}
+					});
 
 					addWindow.add(indxLab); addWindow.add(addBtn); addWindow.add(rbldBtn); addWindow.add(rstBtn); addWindow.add(rmvBtn);
 				}
@@ -94,4 +130,10 @@ public class MainWindow extends JFrame
 		setResizable(false);
 	}
 	
+	public void notImplemented() 
+	{
+		JFrame f;  
+		f=new JFrame();  
+ 	    JOptionPane.showMessageDialog(f,"This Feature is not implemented yet");
+	}
 }
