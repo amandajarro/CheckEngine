@@ -66,7 +66,7 @@ public class MainWindow extends JFrame
 			{
 				public void actionPerformed(ActionEvent argO) 
 				{
-					JFrame addWindow = new JFrame("Maintenance View"); 
+					JFrame mtnWindow = new JFrame("Maintenance View"); 
 
 					JLabel indxLab = new JLabel("<html><font size=6>Index Maintenence</html>");
 
@@ -75,11 +75,12 @@ public class MainWindow extends JFrame
 					JButton rstBtn = new JButton("Reset Windows");
 					JButton rmvBtn = new JButton("Remove Selected Files");
 
-					addWindow.setSize(600,400);  
-					addWindow.setLayout(null);  
-					addWindow.setVisible(true);
-					addWindow.setResizable(false);
-					addWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+					mtnWindow.setSize(600,400);  
+					mtnWindow.setLayout(null);  
+					mtnWindow.setVisible(true);
+					mtnWindow.setResizable(false);
+					mtnWindow.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+					mtnWindow.setLocationRelativeTo(null);
 					
 					indxLab.setBounds(0,0,600,50);
 					indxLab.setHorizontalAlignment(JLabel.CENTER);
@@ -124,7 +125,7 @@ public class MainWindow extends JFrame
 							}
 					});
 
-					addWindow.add(indxLab); addWindow.add(addBtn); addWindow.add(rbldBtn); addWindow.add(rstBtn); addWindow.add(rmvBtn);
+					mtnWindow.add(indxLab); mtnWindow.add(addBtn); mtnWindow.add(rbldBtn); mtnWindow.add(rstBtn); mtnWindow.add(rmvBtn);
 				}
 			});
 		
@@ -136,6 +137,7 @@ public class MainWindow extends JFrame
         setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setResizable(false);
+		setLocationRelativeTo(null);
 	}
 	
 	public void notImplemented() 
