@@ -1,20 +1,11 @@
 package hcc.checkengine.search;
 
 import javax.swing.*;
-import javax.swing.table.TableColumn;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.concurrent.Flow;
 
 public class CheckEngineSearch extends JFrame {
-    private JLabel searchLabel;
-    private JTextField searchField;
-    private JButton searchButton;
-    private JButton maintenanceButton;
-    private JButton aboutButton;
-
-
 
     public static void main(String[] args) {
         CheckEngineSearch searchWindow = new CheckEngineSearch();
@@ -91,6 +82,15 @@ public class CheckEngineSearch extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Display About information...");
+            }
+        });
+
+        maintenanceButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (!CheckEngineMaintenance.isOpen()) {
+                    CheckEngineMaintenance.showFrame();
+                }
             }
         });
 
