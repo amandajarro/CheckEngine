@@ -11,14 +11,22 @@ public class MainWindow extends JFrame
 	{
 		super ("Search Engine");
 			
-		JTextArea textArea = new JTextArea("Search Terms");
+		JTextArea searchArea = new JTextArea("Search Terms");
 		JButton abtBtn = new JButton("About");
 		JButton srchBtn = new JButton("Search");
 		JButton mtnBtn = new JButton("Maintenance");
 		JLabel lab1 = new JLabel("<html><font size=8><b>Search Engine</b></html>");
-		
+		JRadioButton allTrm = new JRadioButton("All of the Search Terms");
+		JRadioButton anyTrm = new JRadioButton("Any of the Search Terms");
+		JRadioButton extTrm = new JRadioButton("Exact Phrase");
 		
 		lab1.setBounds(180,-5,350,50); 
+		allTrm.setBounds(70, 85, 160, 15);
+		anyTrm.setBounds(230, 85, 170, 15);
+		extTrm.setBounds(400, 85, 150, 15);
+
+		ButtonGroup srchBtnGrp = new ButtonGroup(); 
+		srchBtnGrp.add(allTrm); srchBtnGrp.add(anyTrm); srchBtnGrp.add(extTrm);
 
 		//search button
 		srchBtn.setBounds(410,50,80,30);
@@ -120,9 +128,9 @@ public class MainWindow extends JFrame
 				}
 			});
 		
-		textArea.setBounds(125,50,280,30);
+		searchArea.setBounds(125,50,280,30);
 		
-		add(abtBtn); add(textArea); add(mtnBtn); add(lab1); add(srchBtn);
+		add(abtBtn); add(searchArea); add(mtnBtn); add(lab1); add(srchBtn); add(allTrm); add(anyTrm); add(extTrm);
 		setLayout(null);
 		setSize(600, 500);
         setVisible(true);
