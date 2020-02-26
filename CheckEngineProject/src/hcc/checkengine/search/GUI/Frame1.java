@@ -1,18 +1,9 @@
-package GUI;
+package hcc.checkengine.search.GUI;
 
+import javax.swing.*;
+import java.awt.*;
 
-import java.awt.EventQueue;
-import javax.swing.JFrame;
-import javax.swing.JTextField;
-import javax.swing.JRadioButton;
-import javax.swing.JButton;
-import javax.swing.JLabel;
-import java.awt.Font;
-import javax.swing.JMenuBar;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-
-
+import static java.awt.EventQueue.*;
 
 public class Frame1 {
 
@@ -23,16 +14,14 @@ public class Frame1 {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Frame1 window = new Frame1();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		invokeLater(() -> {
+            try {
+                Frame1 window = new Frame1();
+                window.frame.setVisible(true);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
 	}
 
 	/**
