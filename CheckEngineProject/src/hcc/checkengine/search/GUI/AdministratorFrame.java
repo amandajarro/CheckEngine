@@ -1,19 +1,23 @@
 package hcc.checkengine.search.GUI;
 import javax.swing.*;
 import java.awt.*;
-
-import static java.awt.EventQueue.invokeLater;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class AdministratorFrame {
 
 	private JFrame frame;
+	private static boolean isOpen = false;
 
 	/**
 	 * Create the application.
 	 */
 	public AdministratorFrame() {
-		initialize();
-		this.frame.setVisible(true);
+		if (!isOpen) {
+			initialize();
+			this.frame.setVisible(true);
+			isOpen = true;
+		}
 	}
 
 	/**
@@ -24,6 +28,13 @@ public class AdministratorFrame {
 		frame.setBounds(100, 100, 714, 540);
 		frame.setResizable(false);
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+		frame.addWindowListener(new WindowAdapter() {
+			@Override
+			public void windowClosing(WindowEvent e) {
+				isOpen = false;
+			}
+		});
 
 		JMenuBar menuBar_1 = new JMenuBar();
 		frame.setJMenuBar(menuBar_1);
