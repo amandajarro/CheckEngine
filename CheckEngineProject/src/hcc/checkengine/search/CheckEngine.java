@@ -1,13 +1,12 @@
 package hcc.checkengine.search;
 
-import hcc.checkengine.search.GUI.Frame1;
+import hcc.checkengine.search.GUI.SearchFrame;
 
 public class CheckEngine {
 
 	public static void main(String[] args) {
 
-		Frame1 frame = new Frame1();
-
+		SearchFrame frame = new SearchFrame();
 
 	}
 
